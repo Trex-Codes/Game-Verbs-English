@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div>
+		<article>
+
+				<article id="FormHTML"></article>
+
+				<button id="starGameA">Play A !</button>
+						<button id="GroupA">Group A</button>
+
+
+				<button id="starGameB">Play B !</button>
+						<button id="GroupB">Group B</button>
+
+				<button id="starGameC">Play C !</button>
+						<button id="GroupC">Group C</button>
+
+				<button id="reset">Reset</button>
+		</article>
+	</div>
+	<script>
+
+
+	function Let_Look_Btns() {
+
+
+		document.getElementById('GroupA').onclick = function(){
+				Visiblity_ButtonPlayA()
+		}
+
+		document.getElementById('GroupB').onclick = function(){
+				Visiblity_ButtonPlayB()
+		}
+
+		document.getElementById('GroupC').onclick = function(){
+				Visiblity_ButtonPlayC()
+		}
+
+
+
+		// Function show button play
+		function Visiblity_ButtonPlayA() {
+			console.log("acepts")
+			document.getElementById('starGameA').style.visibility = "visible";
+			document.getElementById('starGameA').style.display = "inherit";
+		}
+
+		// Function show button play
+		function Visiblity_ButtonPlayB() {
+			console.log("acepts")
+			document.getElementById('starGameB').style.visibility = "visible";
+			document.getElementById('starGameB').style.display = "inherit";
+		}
+
+
+		// Function show button play
+		function Visiblity_ButtonPlayC() {
+			console.log("acepts")
+			document.getElementById('starGameC').style.visibility = "visible";
+			document.getElementById('starGameC').style.display = "inherit";
+		}
+
+	}
+
+	Let_Look_Btns()
+	
+
+	const Verbs_A = ["Buy","Bring","Think","Seek","Fight","Teach","catch", "sleep", "feel", "feel","keep", "sweep", "meet", "kneel", "creep", "weep", "leave", "cling", "sting", "swing", "spin", "stick", "strike",  "dig", "hang", "find",  "bind","grind", "wind", "unwind", "unbind", "hold", "behold", "uphold", "withhold", "bleed", "breed", "feed", "speed", "flee", "Spend", "send", "build", "bend", "lend", "say", "pay", "lay", "tell", "foretell", "sell", "stand", "understand", "withstand", "deal", "lean", "mean", "leap", "win", "shine", "bite", "slide", "hide", "light", "lose", "shoot", "shoe", "sid" , "spit", "have", "make" ,"read", "hear" ]
+	
+		const Verbs_B = []
+		const Verbs_C = []
+
+	var cont = 0 ;
+	var cicle = 0;
+
+	buttonPlayA = document.getElementById('starGameA');
+	buttonPlayB = document.getElementById('starGameB');
+	buttonPlayC = document.getElementById('starGameC');
+
+
+
+
+	/*------------- VERBS A -------------*/
+
+	document.getElementById('starGameA').onclick = function () {
+
+			var NumbberRandom = Math.random() * 72
+			console.log(NumbberRandom);  // number choose random verb
+
+			document.getElementById('FormHTML').innerHTML = Verbs_A[parseInt(NumbberRandom)]
+		}
+
+
+
+
+
+
+	/* BUTTON RESET */
+	document.getElementById('reset').onclick = function () {
+		buttonPlayA.style.visibility = 'hidden';
+		buttonPlayA.style.display = 'none';
+
+		buttonPlayB.style.visibility = 'hidden';
+		buttonPlayB.style.display = 'none';
+
+
+		buttonPlayC.style.visibility = 'hidden';
+		buttonPlayC.style.display = 'none';
+
+
+
+	}
+
+
+	</script>
+</body>
+</html>
