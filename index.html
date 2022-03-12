@@ -71,9 +71,10 @@
 	Let_Look_Btns()
 	
 
-	const Verbs_A = ["Buy","Bring","Think","Seek","Fight","Teach","catch", "sleep", "feel", "feel","keep", "sweep", "meet", "kneel", "creep", "weep", "leave", "cling", "sting", "swing", "spin", "stick", "strike",  "dig", "hang", "find",  "bind","grind", "wind", "unwind", "unbind", "hold", "behold", "uphold", "withhold", "bleed", "breed", "feed", "speed", "flee", "Spend", "send", "build", "bend", "lend", "say", "pay", "lay", "tell", "foretell", "sell", "stand", "understand", "withstand", "deal", "lean", "mean", "leap", "win", "shine", "bite", "slide", "hide", "light", "lose", "shoot", "shoe", "sid" , "spit", "have", "make" ,"read", "hear" ]
+	const Verbs_A = ["Buy","Bring","Think","Seek","Fight","Teach","catch", "sleep", "feel", "keep", "sweep", "meet", "kneel", "creep", "weep", "leave", "cling", "sting", "swing", "spin", "stick", "strike",  "dig", "hang", "find",  "bind","grind", "wind", "unwind", "unbind", "hold", "behold", "uphold", "withhold", "bleed", "breed", "feed", "speed", "flee", "Spend", "send", "build", "bend", "lend", "say", "pay", "lay", "tell", "foretell", "sell", "stand", "understand", "withstand", "deal", "lean", "mean", "leap", "win", "shine", "bite", "slide", "hide", "light", "lose", "shoot", "shoe", "sid" , "spit", "have", "make" ,"read", "hear" ];
 	
-		const Verbs_B = []
+		const Verbs_B = ["Write", "Drive", "Ride", "Rise", "Arise", "Underwrite", "Strive", "Begin", "Drink", "Sing", "Sink", "Swim", "Stink", "Spring", "Shrink", "Ring", "Run", "Speak", "Steal", "Break", "Yread", "Choose", "Freeze", "Wake", "Wear", "Tear", "Swear", "Bear", "Take", "Mistake", "Undertake", "Partake", "Shake", "Get", "Forget", "Give", "Forgive", "Bid", "Forbid", "Eat", "Fall", "know", "Grow", "Blow", "Throw", "Fly", "Draw", "Withdraw", "Come", "Become", "Overcome", "Lie", "Underlie", "Slay", "Be", "See", "Foresee", "Do", "Go", "Undergo", "Overdo", "Outdo", "Forego" ];
+
 		const Verbs_C = []
 
 	var cont = 0 ;
@@ -90,11 +91,34 @@
 
 	document.getElementById('starGameA').onclick = function () {
 
-			var NumbberRandom = Math.random() * 72
+			var NumbberRandom = Math.random() * 71
 			console.log(NumbberRandom);  // number choose random verb
 
 			document.getElementById('FormHTML').innerHTML = Verbs_A[parseInt(NumbberRandom)]
+
+
+		 for (var i = 0; i < Verbs_A.length; i++) {
+			console.log(i); 
+			// console.log(Verbs_A[44]);
+		}   
 		}
+
+
+	document.getElementById('starGameB').onclick = function () {
+
+			var NumbberRandom2 = Math.random() * 63
+			console.log(NumbberRandom2);  // number choose random verb
+
+			document.getElementById('FormHTML').innerHTML = Verbs_B[parseInt(NumbberRandom2)]
+
+
+		 for (var i = 0; i < Verbs_B.length; i++) {
+			// console.log(i); 
+			// console.log(Verbs_A[44]);
+			console.log(Verbs_A[i]);
+		}   
+		}
+
 
 
 
