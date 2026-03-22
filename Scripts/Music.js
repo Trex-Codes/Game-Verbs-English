@@ -1,22 +1,47 @@
-/*var sonido = new Audio("Storm RG_CoolJourney.mp3");
+/* Music.js - Smart Audio Controller */
 
-document.addEventListener("mouseover", function(){
-    sonido.play()
-}); 
+const audio = document.getElementById("gameMusic");
+const audioBtn = document.getElementById("btn_audio");
+let isPlaying = false;
 
-*/
-
-var v = document.getElementsByTagName("audio")[0];
-var sound = false;
-var boton = document.getElementById("btn_audio");
-boton.addEventListener("click", function() {
-    if (!sound) {
-        v.play();
-        this.innerHTML = "Pause";
-        sound = true;
-    } else {
-        v.pause();
-        this.innerHTML = "Play";
-        sound = false;
+/**
+ * Common browser-friendly autoplay: 
+ * Listen for the FIRST interaction on the document.
+ */
+function attemptAutoplay() {
+    if (!isPlaying) {
+        audio.play().then(() => {
+            isPlaying = true;
+            if (audioBtn) audioBtn.innerHTML = "🔊";
+            // Remove the listeners after first successful play
+            document.removeEventListener('click', attemptAutoplay);
+            document.removeEventListener('keydown', attemptAutoplay);
+        }).catch(err => {
+            console.warn("Autoplay still blocked, waiting for more interaction.");
+        });
     }
-});
+}
+
+// Add listeners for first interaction
+document.addEventListener('click', attemptAutoplay);
+document.addEventListener('keydown', attemptAutoplay);
+
+if (audio && audioBtn) {
+    audioBtn.addEventListener("click", function(e) {
+        e.stopPropagation(); // Avoid double triggering the doc click
+        if (!isPlaying) {
+            audio.play();
+            this.innerHTML = "🔊";
+            isPlaying = true;
+        } else {
+            audio.pause();
+            this.innerHTML = "🔈";
+            isPlaying = false;
+        }
+    });
+
+    audio.onended = () => {
+        audioBtn.innerHTML = "🔈";
+        isPlaying = false;
+    };
+}

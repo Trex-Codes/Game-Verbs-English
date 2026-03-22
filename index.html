@@ -1,75 +1,70 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Verbs Game</title>
-	<link rel="stylesheet" href="Styles/style.css">
-	<link rel="stylesheet" href="Styles/Styles_Start.css">
-	<link rel="stylesheet" href="Styles/Styles_Buttons_GameCenter.css">
-	<link rel="stylesheet" href="Styles/Footer.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Verbs | Premium Learning</title>
+    
+    <!-- Link External Styles -->
+    <link rel="stylesheet" href="Styles/Styles_Start.css">
+    <link rel="stylesheet" href="Styles/Footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="Assets/icon.png">
 </head>
 <body>
 
-	<div class="area">
-		<ul class="circles">
+    <div class="area">
+        <!-- Minimal Background Layer -->
+        <ul class="circles">
+            <li></li><li></li><li></li>
+        </ul>
 
-<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+        <!-- Main Card Interface -->
+        <main class="Content-all">
+            <!-- Central Flashcard (Sleek Redesign) -->
+            <section id="FormHTML" class="flashcard glass-card">
+                <h2 id="verb">...</h2>
+            </section>
 
-	<audio src="Assets/Crypt_of_Insomnia_-_Futuristic_Railroad.mp3" controls loop>
- 	</audio>
- 		
-	<button id="btn_audio">Play</button>
+            <!-- Refined Action Area -->
+            <div id="controls" class="minimal-controls">
+                
+                <div class="group-selectors">
+                    <div class="action-item">
+                        <button id="GroupA" class="pill-btn">Pattern A</button>
+                        <button id="starGameA" class="action-btn next-btn" style="display:none;">Next</button>
+                    </div>
 
-		<section class="Content-all">
-			<article id="FormHTML">
-				<h2 id="verb"></h2>
-			</article>
+                    <div class="action-item">
+                        <button id="GroupB" class="pill-btn">Pattern B</button>
+                        <button id="starGameB" class="action-btn next-btn" style="display:none;">Next</button>
+                    </div>
 
-			<aside class="items-btns" id="items-btns">
+                    <div class="action-item">
+                        <button id="GroupC" class="pill-btn">Pattern C</button>
+                        <button id="starGameC" class="action-btn next-btn" style="display:none;">Next</button>
+                    </div>
+                </div>
 
-				<button id="GroupA">Group A</button>
-					<button id="starGameA">PLay A</button>
+                <!-- Subtle Reset -->
+                <button id="reset" class="reset-link">Reset Training</button>
+            </div>
+        </main>
 
-				<button id="GroupB">Group B</button>
-					<button id="starGameB">PLay B</button>
+        <!-- Hidden Audio (Completely Invisible) -->
+        <audio id="gameMusic" src="Assets/Crypt_of_Insomnia_-_Futuristic_Railroad.mp3" controls loop style="display:none;"></audio>
+    </div>
 
-				<button id="GroupC">Group C</button>
-					<button id="starGameC">PLay C</button>
+    <!-- Clean Footer -->
+    <footer class="footer-distributed">
+        <div class="container-footer">
+            <p>Trex-Codes &copy; 2026</p>
+        </div>
+    </footer>
 
-				<button id="reset">Reset</button>
-			</aside>
-
-			</article>
-		</section>
-	</div>
-
-		<footer class="footer-distributed">
-
-			<div class="footer-right">
-				<a href="https://github.com/Trex-Codes">
-					<i class="fa-brands fa-github"></i>
-				</a>
-			</div>
-
-			<div class="footer-left">
-
-				<p class="footer-links">
-					<a class="link-1" href="Start.html">Home</a>
-					<a href="https://github.com/Trex-Codes">Contact</a>
-				</p>
-
-				<p>Trex-Codes &copy; 2022</p>
-			</div>
-
-		</footer>
-</ul>
-
-
-<script src="Scripts/Main.js"></script>
-<script src="Scripts/Music.js"></script>
+    <!-- Scripts -->
+    <script src="Scripts/Main.js"></script>
+    <script src="Scripts/Music.js"></script>
 
 </body>
 </html>
-
-<form action="" method=""></form>

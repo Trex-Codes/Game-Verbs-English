@@ -1,64 +1,39 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verbs Game</title>
-    <link rel="stylesheet" href="Styles/style.css">
+    <title>Begin | Master Verbs</title>
+    
+    <!-- Link External Styles -->
     <link rel="stylesheet" href="Styles/Styles_Start.css">
+    <link rel="icon" href="Assets/icon.png">
 </head>
 <body>
 
+    <div class="area">
+        <!-- Ambient Background (Subtle Orbs) -->
+        <ul class="circles">
+            <li></li><li></li><li></li>
+        </ul>
 
-<div class="context">
-        <h1>Learn the verbs <br> in English</h1>
+        <!-- Minimal Hero Content -->
+        <main class="context">
+            <h1 class="main-title fade-in">MASTER<br><span>VERBS</span></h1>
+            
+            <div class="action-container fade-in-delayed">
+                <form action="index.html">
+                    <button type="submit" class="start-btn">READY TO START?</button>
+                </form>
+            </div>
+        </main>
+
+        <!-- Completely Hidden Audio (No controls seen) -->
+        <audio id="gameMusic" src="Assets/Crypt_of_Insomnia_-_Futuristic_Railroad.mp3" controls loop style="display:none;"></audio>
     </div>
 
-<div class="area">
-            <ul class="circles">
-
-    <form action="index.html">
-        <input id="btn_musicStart" type="submit" value="Start!">
-    </form>
-
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-
-    <audio src="Assets/Crypt_of_Insomnia_-_Futuristic_Railroad.mp3" controls loop>
-    </audio>
-            <button id="btn_audio">Play</button>
-    </ul>
-
-    </div>
-</body>
+    <!-- Scripts -->
     <script src="Scripts/Music.js"></script>
+
+</body>
 </html>
